@@ -1,0 +1,38 @@
+1. Outputs:
+
+-	Current asset allocations (optimized)
+
+-	Graphs of historical performance of all portfolios
+  -	Min volatility
+  -	Max return
+  -	Max risk-adjusted return
+  - Benchmark1 (Buy&Hold of initial allocation)
+  - Benchmark2 (SPX500)
+
+-	KPIs of all portfolios
+  - CAGR (compound annual %return)
+  - Maximum drawdown (in %)
+  -	Volatility
+  -	Sharpe + Sortino ratios
+  -	MAR + Calmar ratios
+  -	VaR 1% and VaR 5% for 1 Day + 2 Weeks (industry standard)
+
+
+2. Inputs:
+
+- Historical data of assets
+  - Webcrawling
+  - store in database
+
+- User inputs / Default Values:
+  - Rebalancing period (days) / 90
+  - Optimization period (days) / 90
+  - Min allocation per asset in % / 1
+  - Max allocation per asset in % / 100
+  - Allocation steps in % / 0.5 [0.1-10]
+  - Starting allocations in % / equal distribution
+  - Asset selection / none
+
+
+
+3. Calculations:
