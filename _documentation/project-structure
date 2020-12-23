@@ -1,21 +1,21 @@
 1. Outputs:
 
--	Current asset allocations (optimized)
+- Current asset allocations (optimized)
 
--	Graphs of historical performance of all portfolios
-  -	Min volatility
-  -	Max return
-  -	Max risk-adjusted return
+- Graphs of historical performance of all portfolios
+  - Min volatility
+  - Max return
+  - Max risk-adjusted return
   - Benchmark1 (Buy&Hold of initial allocation)
   - Benchmark2 (SPX500)
 
--	KPIs of all portfolios
+- KPIs of all portfolios
   - CAGR (compound annual %return)
   - Maximum drawdown (in %)
-  -	Volatility
-  -	Sharpe + Sortino ratios
-  -	MAR + Calmar ratios
-  -	VaR 1% and VaR 5% for 1 Day + 2 Weeks (industry standard)
+  - Volatility
+  - Sharpe + Sortino ratios
+  - MAR + Calmar ratios
+  - VaR 1% and VaR 5% for 1 Day + 2 Weeks (industry standard)
 
 
 2. Inputs:
