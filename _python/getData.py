@@ -30,14 +30,12 @@ def getData():
 # Display the user´s portfolio and weights
     positions = len(userPortfolioAssets)
     index = 0
-    dataSets = []
-
+    
     print(userPortfolioAssets)
     print(userPortfolioWeights)
     
-
-
 # gather the historical data of the user portfolio
+    dataSets = []
     for asset in userPortfolioAssets:
         dataSets.append(assetList.index(asset))
 
@@ -48,8 +46,3 @@ def getData():
         portfolioData.append(assetListPrices[index])
         
     print(portfolioData)
-
-
-
-
-
