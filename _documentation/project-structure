@@ -22,17 +22,39 @@
 
 - Historical data of assets
   - Webcrawling
-  - store in database
+  - store price data in database (SQL)
 
 - User inputs / Default Values:
   - Rebalancing period (days) / 90
-  - Optimization period (days) / 90
-  - Min allocation per asset in % / 1
-  - Max allocation per asset in % / 100
-  - Allocation steps in % / 0.5 [0.1-10]
   - Starting allocations in % / equal distribution
   - Asset selection / none
+  - UPGRADE: Min allocation per asset in % / 1
+  - UPGRADE: Max allocation per asset in % / 100
+  - UPGRADE: Allocation steps in % / 0.5 [0.1-10]
+  - UPGRADE: Optimization period (days) / 90)
 
 
 
 3. Calculations:
+- KPIs
+- Optimization max profit:
+  - iterate over all possible combinations of asset allocations within the min/max range of the selected portfolio
+  - find the combination with highest profit within the optimization period
+  - return asset allocation
+- UPGRADE: Optimization min risk:
+  - iterate over all possible combinations of asset allocations within the min/max range of the selected portfolio
+  - find the combination with lowest volatility within the optimization period
+  - return asset allocation
+- UPGRADE: Optimization max risk-adjusted return:
+  - iterate over all possible combinations of asset allocations within the min/max range of the selected portfolio
+  - find the combination with highest sharpe(sortino) ratio
+  - return asset allocation
+- Forecasting of asset allocation:
+  - Optimize for period T-1
+  - Optimize for current period
+  - Take difference of optimization T-1 and T0
+  - Apply difference on top of T0 optimization = forecast
+  - UPGRADE: Take difference of optimization T-1 and "real" results of that allocation
+  - UPGRADE: Calculate average of difference T-1/T0 optimization and T-1/real and add it to current optimization
+- UPGRADE: Do this forecasting for all 3 optimization types
+  
